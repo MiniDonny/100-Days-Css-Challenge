@@ -1,0 +1,144 @@
+/*FONT LETTER OF GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+/*GLOBAL*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*COLORS*/
+:root{
+    --first-color: #DAFDBA;
+    --second-color: #9AEBA3;
+    --third-color: #45C4B0;
+    --fourth-color: #13678A;
+    --fifth-color: #012030;
+    --white: #FFFFFF;
+    --black: #0C0C0D;
+}
+
+/*BODY*/
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--first-color);
+}
+
+/*MENU*/
+.menu{
+    aspect-ratio: 1/1; /* propiedad que se utiliza para establecer la relación de aspecto de un contenedor.
+                        El contenedor mantendrá automáticamente la relación de aspecto 
+                        independientemente del contenido que haya dentro de él. 
+                        Si el contenedor se estira o se reduce en tamaño, la relación de aspecto se mantendrá constante.
+                        aspect-ratio: anchura / altura; 
+                        */
+    width: 12vw;
+    display: flex;
+    flex-direction: column;
+    gap: 12%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+span{
+    height: 10%;
+    width: 100%;
+    background: var(--black);
+    filter:drop-shadow(1px 1px 10px var(--white)) ;
+    border-radius: 6px;
+}
+
+/*RESPETAR EL ORDEN EN EL QUE ESTAN LAS ANIMACIONES POR QUE SI NO, NO ANDA, NO ENTIENDO BIEN EL PORQUE*/
+
+/*-----ANIMA REVERSA--------*/
+.line3{
+    animation: buttomRev 700ms ease-in-out backwards;
+}
+@keyframes buttomRev {
+    0%{
+        transform: translateY(-225%) rotate(135deg);
+    }
+    50%{
+        transform: translateY(-225%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.line2{
+    animation: centerRev 700ms ease-in-out forwards;
+}
+@keyframes centerRev {
+    0%,50%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+.line1{
+    animation: topRev 700ms ease-in-out forwards;
+}
+@keyframes topRev{
+    0%{
+        transform: translateY(225%) rotate(45deg);
+    }
+    50%{
+        transform: translateY(225%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+
+/*------ANIMACION INICIAL---------*/
+.top{
+    animation: top 700ms ease-in-out forwards;
+}
+@keyframes top{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: translateY(225%);
+    }
+    100%{
+        transform: translateY(225%) rotate(45deg);
+    }
+}
+
+.center{
+    animation: center 700ms ease-in-out forwards;
+}
+@keyframes center{
+    0%{
+        transform: scale(1);
+    }
+    50%,100%{
+        transform: scale(0);
+    }
+}
+
+.buttom{
+    animation: buttom 700ms ease-in-out forwards;
+}
+@keyframes buttom{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: translateY(-225%);
+    }
+    100%{
+        transform: translateY(-225%) rotate(135deg);
+    }
+}
+
