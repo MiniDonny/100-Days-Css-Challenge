@@ -1,0 +1,135 @@
+/*FONT LETTER OF GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+/*GLOBAL*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*COLORS*/
+:root{
+    --background-color: #e56262;
+    --esfera-color: #fff;
+    --shadow: rgba(0, 0, 0, 0.2);
+}
+
+/*BODY*/
+body{
+    height: 100vh;
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*DAY 4*/
+.container{
+    aspect-ratio: 1/1;
+    width: 30vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*ESFERA 1*/
+.esfera1{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: var(--esfera-color);
+    box-shadow: 28px 28px 31px 10px var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: escale1 4s linear infinite;
+}
+@keyframes escale1{
+    0%{
+        transform: scale(0);
+    }
+    20%{
+        transform: scale(1);
+    }
+    40%{
+        transform: scale(1);
+    }
+    60%{
+        transform: scale(1);
+    }
+    70%{
+        transform: scale(1);
+    }
+    90%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+
+/*ESFERA 2*/
+.esfera2{
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    background: var(--esfera-color);
+    box-shadow: 28px 28px 31px 10px var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: escale2 4s linear infinite;
+}
+@keyframes escale2{
+    0%{
+        transform: scale(0);
+    }
+    15%{
+        transform: scale(0);
+    }
+    30%{
+        transform: scale(1);
+    }
+    60%{
+        transform: scale(1);
+    }
+    85%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+
+/*ESFERA 3*/
+.esfera3{
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    background: var(--esfera-color);
+    box-shadow: 28px 28px 31px 10px var(--shadow);
+    animation: escale3 4s linear infinite;
+}
+@keyframes escale3{
+    0%{
+        transform: scale(0);
+    }
+    30%{
+        transform: scale(0);
+    }
+    40%{
+        transform: scale(1);
+    }
+    55%{
+        transform: scale(1);
+    }
+    70%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
